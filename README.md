@@ -1,6 +1,6 @@
 # Employee Management System 🚀
 
-Welcome to the **Employee Management System** project! This is not your ordinary project—it's a fun, hands-on way to master Java 8 **Streams** and **Functional Interfaces** with real-world-inspired challenges. Whether you're a seasoned developer looking to level up your functional programming skills or someone curious about the power of Java streams, you're in the right place! 💻
+Welcome to the **Employee Management System** project! This is not your ordinary project—it's a fun, hands-on way to master Java  **Streams** and **Functional Interfaces** with real-world-inspired challenges. Whether you're a seasoned developer looking to level up your functional programming skills or someone curious about the power of Java streams, you're in the right place! 💻
 
 ![Java Streams](https://img.shields.io/badge/Java-Streams%20%26%20Functional%20Programming-blue) ![Lombok](https://img.shields.io/badge/Project-Lombok-orange) ![GitHub](https://img.shields.io/badge/Practice-Challenge%20Mode-brightgreen)
 
