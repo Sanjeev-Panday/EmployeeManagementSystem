@@ -1,8 +1,6 @@
 package com.example.employeemanagement;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -31,6 +29,24 @@ public class Main {
         // Task 4: Group employees by their departments.
         Map<String,List<Employee>> groupedByDepartmentName = employees.stream()
                 .collect(Collectors.groupingBy(employee -> employee.getDepartment().name()));
+
+        // Variants:
+        //Map<K, D> result = stream.collect(Collectors.groupingBy(classifier, downstreamCollector));
+        //Grouping Employees by Department and Counting Them
+        Map<Department, Long> empCountPerDepartment = employees.stream()
+                .collect(Collectors
+                        .groupingBy(Employee::getDepartment, Collectors.counting()));
+
+        //Grouping Employees by Department and Summing Their Salaries
+        Map<Department, Double> totalSalaryPerDepartment = employees.stream()
+                .collect(Collectors
+                        .groupingBy(Employee::getDepartment,Collectors.summingDouble(Employee::getSalary)));
+
+        //Map<K, D> result = stream.collect(Collectors.groupingBy(classifier, supplier, downstreamCollector));
+        // Grouping Employees by Department and Using a TreeMap for Sorted Keys
+        Map<Department, List<Employee>> sortedEmployeePerDepartment = employees.stream()
+                .collect(Collectors
+                        .groupingBy(Employee::getDepartment, TreeMap::new, Collectors.toList()));
 
     }
 }
