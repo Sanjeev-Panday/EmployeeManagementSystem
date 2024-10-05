@@ -2,9 +2,8 @@ package com.example.employeemanagement;
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-public class Main {
+public class Solution {
     public static void main(String[] args) {
         List<Employee> employees = DataGenerator.generateEmployees();
         // Task 1 : Find all employees older than 40 and collect their names into a list.
