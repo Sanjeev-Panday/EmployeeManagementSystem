@@ -123,3 +123,12 @@ Below is a series of fun challenges (tasks) that you can complete to master Java
 *Challenge:* Sort the list of employees first by department, then by salary in descending order.
 
 💡 *Hint:* Use `Comparator.comparing()` with `thenComparing()`.
+
+
+## 📝 Incremental Solutions
+
+We believe the best way to master Java Streams and Functional Interfaces is by tackling challenges head-on. That's why we've included the **`Solution.java`** file, where solutions to the tasks are being added **incrementally**. But here's the catch — we highly encourage you to **try solving the challenges on your own first** before peeking into the answers. 💡
+
+Think of **`Solution.java`** as your safety net — when you're stuck or want to compare your approach, feel free to refer to it for guidance or validation. We'll be updating it over time with elegant solutions, but the real growth comes from experimenting and solving the tasks yourself! 🎯
+
+Remember, **the journey is more important than the destination**, so have fun, and don't be afraid to make mistakes. Happy coding! 🚀
