@@ -48,5 +48,15 @@ public class Main {
                 .collect(Collectors
                         .groupingBy(Employee::getDepartment, TreeMap::new, Collectors.toList()));
 
+        // Task 5: Partition employees into two groups based on whether they earn more than $80,000.
+
+        Map<Boolean, List<Employee>> partitionBy80000 = employees.stream()
+                .collect(Collectors.partitioningBy(e -> e.getSalary() > 80000));
+
+        // Variant Get employee name
+        Map<Boolean, List<String>> partitionBy80000Names = employees.stream()
+                .collect(Collectors.partitioningBy(e -> e.getSalary() > 80000, Collectors.mapping(Employee::getName, Collectors.toList())));
+
+
     }
 }
