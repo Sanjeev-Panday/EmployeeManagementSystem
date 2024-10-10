@@ -21,7 +21,7 @@ EmployeeManagementSystem/
 │   └── com/
 │       └── example/
 │           └── employeemanagement/
-│               ├── Main.java
+│               ├── Solution.java
 │               ├── Employee.java
 │               ├── Department.java
 │               ├── Project.java
