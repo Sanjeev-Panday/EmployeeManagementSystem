@@ -1,6 +1,7 @@
 package com.example.employeemanagement;
 
 import java.util.*;
+import java.util.stream.Collector;
 import java.util.stream.Collectors;
 
 public class Solution {
@@ -55,6 +56,31 @@ public class Solution {
         // Variant Get employee name
         Map<Boolean, List<String>> partitionBy80000Names = employees.stream()
                 .collect(Collectors.partitioningBy(e -> e.getSalary() > 80000, Collectors.mapping(Employee::getName, Collectors.toList())));
+
+        // Task 6: Calculate the total salary expenditure of the company.
+
+        Double totalExpenditure = employees.stream().mapToDouble(Employee::getSalary).sum();
+
+        // Task 7: Implement a custom collector to concatenate all employee names, separated by commas.
+        String concatdNames1 = employees.stream().map(Employee::getName).collect(Collector.of(StringBuilder::new,
+                (sb , name) -> {
+                    if(!sb.isEmpty()) {
+                        sb.append(", ");
+                    }
+                    sb.append(name);
+                },
+                (sb1, sb2) -> {
+                    if(!sb1.isEmpty() && !sb2.isEmpty()){
+                        sb1.append(", ");
+                    }
+                    return sb1.append(sb2);
+                },
+                StringBuilder::toString
+                ));
+
+        // Variant : with Joining
+        String concatdNames2 = employees.stream().map(Employee::getName).
+                collect(Collectors.joining(", "));
 
 
     }
